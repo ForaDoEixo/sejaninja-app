@@ -3,6 +3,7 @@ import { View, StatusBar } from 'react-native'
 import { connect } from 'react-redux'
 import StartupActions from '../Redux/StartupRedux'
 import ReduxPersist from '../Config/ReduxPersist'
+import { KeepAwake } from 'expo';
 
 // Styles
 import styles from './Styles/RootContainerStyles'
@@ -21,6 +22,7 @@ class RootContainer extends Component {
       <View style={styles.applicationView}>
         <StatusBar barStyle='light-content' />
         <AppNavigation />
+        <KeepAwake />
       </View>
     )
   }

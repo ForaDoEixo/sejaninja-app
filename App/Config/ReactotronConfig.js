@@ -7,13 +7,13 @@ import sagaPlugin from 'reactotron-redux-saga'
 if (Config.useReactotron) {
   // https://github.com/infinitered/reactotron for more options!
   Reactotron
-    .configure({ name: 'Ignite App' })
+    .configure({ name: 'Seja Ninja App', host: "0.0.0.0" })
     .useReactNative()
     .use(reduxPlugin({ onRestore: Immutable }))
     .use(sagaPlugin())
     .connect()
 
-  // Let's clear Reactotron on every time we load the app
+    // Let's clear Reactotron on every time we load the app
   Reactotron.clear()
 
   // Totally hacky, but this allows you to not both importing reactotron-react-native
