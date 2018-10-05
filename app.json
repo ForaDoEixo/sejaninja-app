@@ -2,9 +2,9 @@
   "name": "SejaNinjaApp",
   "displayName": "SejaNinjaApp",
   "expo": {
-    "name": "SejaNinjaApp",
+    "name": "Seja Ninja",
     "description": "No description",
-    "slug": "SejaNinjaApp",
+    "slug": "seja-ninja",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "version": "1.0.0",
@@ -14,7 +14,7 @@
     "splash": {
       "image": "./App/Images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "packagerOpts": {
       "assetExts": [

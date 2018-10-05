@@ -1,8 +1,8 @@
 {
-  "presets": ["react-native"],
+  "presets": ["expo","react-native"],
   "env": {
     "production": {
-      "plugins": ["ignite-ignore-reactotron"]
+      "plugins": ["ignite-ignore-reactotron","react-native-paper/babel"]
     }
   }
 }
