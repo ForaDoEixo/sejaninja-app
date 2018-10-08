@@ -58,3 +58,5 @@ buck-out/
 # Misc
 #
 .env
+App/Images/videoplayback.mp4
+.expo/packager-info.json
