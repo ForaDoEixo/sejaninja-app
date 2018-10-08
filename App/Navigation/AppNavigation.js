@@ -1,16 +1,15 @@
 import React from 'react'
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import { FontAwesome, Entypo } from '@expo/vector-icons'
-import { Appbar } from 'react-native-paper';
 
-import AboutScreen from '../Containers/AboutScreen'
-import LaunchScreen from '../Containers/LaunchScreen'
-import CardScreen from '../Containers/CardScreen'
+import QuemSomosScreen from '../Containers/QuemSomosScreen'
+import FinancieScreen from '../Containers/FinancieScreen'
+import SejaNinjaScreen from '../Containers/SejaNinjaScreen'
 import IconLogo from '../Components/IconLogo'
 
 export default createMaterialBottomTabNavigator({
-  CardScreen: {
-    screen: CardScreen,
+  SejaNinjaScreen: {
+    screen: SejaNinjaScreen,
     navigationOptions: ({ navigation }) => ({
       title: 'Seja Ninja',
       tabBarColor: 'white',
@@ -19,8 +18,8 @@ export default createMaterialBottomTabNavigator({
       )
     }),
   },
-  AboutScreen: {
-    screen: AboutScreen,
+  QuemSomosScreen: {
+    screen: QuemSomosScreen,
     navigationOptions: ({ navigation }) => ({
       title: 'Quem Somos',
       tabBarColor: 'white',
@@ -29,8 +28,8 @@ export default createMaterialBottomTabNavigator({
       )
     }),
   },
-  LaunchScreen: {
-    screen: LaunchScreen,
+  FinancieScreen: {
+    screen: FinancieScreen,
     navigationOptions: ({ navigation }) => ({
       title: 'Financie',
       tabBarColor: 'white',
@@ -40,10 +39,6 @@ export default createMaterialBottomTabNavigator({
     }),
   },
 }, {
-  initialRouteName: 'CardScreen',
-  header: (
-    <Appbar.Header>
-      <Appbar.Content title="Seja Ninja" />
-    </Appbar.Header>
-  ),
+  initialRouteName: 'SejaNinjaScreen',
 });
+

@@ -1,17 +1,23 @@
 
 import * as React from 'react';
-import { Alert, ScrollView, StyleSheet } from 'react-native';
+
+import { Alert, ScrollView, StyleSheet, Platform, Share } from 'react-native';
+
 import {
   Title,
   Caption,
   Paragraph,
   Card,
   Button,
+  Chip,
   withTheme,
 } from 'react-native-paper';
-
-const title = 'Card';
+import { FontAwesome } from '@expo/vector-icons'
+// const title = 'Card';
 class CardExample extends React.Component {
+  // state = {
+  //   visible: true,
+  // }
 
   render() {
     const {
@@ -25,27 +31,32 @@ class CardExample extends React.Component {
         contentContainerStyle={styles.content}
       >
         <Card style={styles.card}>
-          {/* <Card.Cover source={require('../assets/wrecked-ship.jpg')} /> */}
+          <Card.Cover source={require('../Images/ele_nao.jpg')} />
           <Card.Content>
-            <Title>Abandoned Ship</Title>
+            {/* <Title>Abandoned Shiiiip</Title> */}
+            <Paragraph></Paragraph>
             <Paragraph>
-              The Abandoned Ship is a wrecked ship located on Route 108 in
-              Hoenn, originally being a ship named the S.S. Cactus. The second
-              part of the ship can only be accessed by using Dive and contains
-              the Scanner.
+            Não adianta trapacear! Ninguém vai hackear o voto das mulheres. Mais de 2 milhões de mulheres ciberneticamente violadas em sua luta contra o fascismo. A elas, toda solidariedade e máximo respeito!
             </Paragraph>
-          </Card.Content>
-        </Card>
-        <Card style={styles.card}>
-          {/* <Card.Cover source={require('../assets/forest.jpg')} /> */}
-          <Card.Actions>
-            <Button primary onPress={() => {}}>
-              Share
-            </Button>
-            <Button primary onPress={() => {}}>
-              Explore
+            <Card.Actions>
+            <Chip icon={() => (<FontAwesome name="hashtag" size={11} />)} onPress={() => console.log('Pressed')}>EleNão</Chip>
+            <Chip icon={() => (<FontAwesome name="hashtag" size={11} />)} onPress={() => console.log('Pressed')}>MulheresContraOFacismo</Chip>
+</Card.Actions>
+<Card.Actions>
+            <Chip icon={() => (<FontAwesome name="hashtag" size={11} />)} onPress={() => console.log('Pressed')}>EleNunca</Chip>
+            <Chip icon={() => (<FontAwesome name="hashtag" size={11} />)} onPress={() => console.log('Pressed')}>MulheresContraBolsonaro</Chip>
+</Card.Actions>
+<Card.Actions>
+            <Button mode="contained" primary onPress={() => { Share.share({
+    message: 'Não adianta trapacear! Ninguém vai hackear o voto das mulheres. Mais de 2 milhões de mulheres ciberneticamente violadas em sua luta contra o fascismo. A elas, toda solidariedade e máximo respeito!',
+    url: 'https://midianinja.org',
+    title: '#EleNão #EleNunca'
+  }, {})}}>
+              Compartilhe
             </Button>
           </Card.Actions>
+
+          </Card.Content>
         </Card>
         <Card style={styles.card}>
           <Card.Content>
@@ -101,6 +112,7 @@ class CardExample extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: Platform.OS === 'android' ? 25 : 22,
   },
   content: {
     padding: 4,
